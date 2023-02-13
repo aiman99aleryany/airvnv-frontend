@@ -1,0 +1,619 @@
+.show-add-property {
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.addpropertyform-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.addpropertyform {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 90%;
+    border-radius: 3rem;
+    background: linear-gradient(-45deg, #5651e5, #3630eb, #b8b7d3, #4f4e72);
+    background-size: 400% 400%;
+    animation: gradient 20s ease infinite;
+    padding: 1rem;
+
+    &-content {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+        border-radius: 2rem;
+        background-color: #fff;
+        box-shadow: 0 1px 10px 1px grey;
+    }
+
+    &-input {
+        font-size: 16px;
+        border-width: 2px;
+        border-color: #5651e5;
+        background-color: #ffffff;
+        color: #000000;
+        border-radius: 9px;
+
+        &:focus {
+            outline: none;
+            border-color: #00b4e8;
+            box-shadow: 0px 0px 5px rgba(86, 81, 229, 0.75);
+        }
+    }
+
+    &-more-images {
+        display: flex;
+        flex-direction: column;
+
+        .btn {
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+    }
+
+    &-more-title {
+        display: flex;
+        flex-direction: column;
+
+        .btn {
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+    }
+
+    &-more-description {
+        display: flex;
+        flex-direction: column;
+
+        .btn {
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+    }
+
+    &-more-price {
+        display: flex;
+        flex-direction: column;
+
+        .btn {
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+    }
+
+    &-more-type {
+        display: flex;
+        flex-direction: column;
+
+        .btn {
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+    }
+
+    &-more-location {
+        display: flex;
+        flex-direction: column;
+        .btn {
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+    }
+
+    &-more-dates {
+        display: flex;
+        flex-direction: column;
+
+        .btn {
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+    }
+
+    &-more-details {
+        display: flex;
+        flex-direction: column;
+
+        .btn {
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+    }
+
+    &-more-offers {
+        display: flex;
+        flex-direction: column;
+
+        .btn {
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+    }
+
+    &-add-images {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        width: 100%;
+        height: fit-content;
+        .addpropertyform-input {
+            width: 100%;
+            font-weight: 600;
+            font-size: 1.1rem;
+            padding: 0.7rem 1rem;
+        }
+    }
+
+    .images-grid {
+        display: flex;
+        gap: 7%;
+        max-width: 80%;
+        max-height: 20%;
+        margin-bottom: 2rem;
+        &-img1 {
+            width: 100%;
+            height: 100%;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        &-img2 {
+            width: 100%;
+            height: 100%;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        &-img3 {
+            width: 100%;
+            height: 100%;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        &-img4 {
+            width: 100%;
+            height: 100%;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        &-img5 {
+            width: 100%;
+            height: 100%;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        .btn {
+            font-size: 1%;
+        }
+    }
+
+    &-add-title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        width: 100%;
+        height: fit-content;
+        .addpropertyform-input {
+            width: 100%;
+            font-weight: 600;
+            font-size: 1.1rem;
+            padding: 0.7rem 1rem;
+        }
+    }
+
+    &-add-description {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        width: 100%;
+        height: fit-content;
+        .addpropertyform-input {
+            width: 100%;
+            font-weight: 600;
+            font-size: 1.1rem;
+            padding: 0.7rem 1rem;
+        }
+    }
+
+    &-add-type {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        width: 100%;
+        height: fit-content;
+        .addpropertyform-input {
+            width: 100%;
+            font-weight: 600;
+            font-size: 1.1rem;
+            padding: 0.7rem 1rem;
+        }
+    }
+
+    &-add-price {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        width: 100%;
+        height: fit-content;
+        .addpropertyform-input {
+            width: 100%;
+            font-weight: 600;
+            font-size: 1.1rem;
+            padding: 0.7rem 1rem;
+        }
+    }
+
+    &-add-location {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        width: 100%;
+        height: fit-content;
+    }
+
+    &-add-country {
+        width: 70%;
+        max-width: 70%;
+        position: relative;
+        .addpropertyform-input {
+            width: 100%;
+            font-weight: 600;
+            font-size: 1.1rem;
+            padding: 0.7rem 1rem;
+        }
+
+        &-dropdown {
+            position: absolute;
+            display: none;
+            flex-direction: column;
+            width: 100%;
+            z-index: 100;
+            font-size: 16px;
+            border-width: 2px;
+            border-color: #5651e5;
+            background-color: #ffffff;
+            color: #000000;
+            border-radius: 0 0 9px 9px;
+            li {
+                padding: 1rem;
+                font-weight: 700;
+                cursor: pointer;
+                font-size: 16px;
+                border-bottom: 2px solid #00b4e8;
+                background-color: #ffffff;
+                color: #333;
+            }
+        }
+    }
+
+    &-add-city {
+        width: 70%;
+        max-width: 70%;
+        position: relative;
+        .addpropertyform-input {
+            width: 100%;
+            padding: 0.7rem 1rem;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        &-dropdown {
+            position: absolute;
+            display: none;
+            flex-direction: column;
+            width: 100%;
+            z-index: 20;
+            font-size: 16px;
+            border-width: 2px;
+            border-color: #5651e5;
+            background-color: #ffffff;
+            color: #000000;
+            border-radius: 0 0 9px 9px;
+            li {
+                padding: 1rem;
+                font-weight: 700;
+                cursor: pointer;
+                font-size: 16px;
+                border-bottom: 2px solid #00b4e8;
+                background-color: #ffffff;
+                color: #333;
+            }
+        }
+    }
+
+    &-add-dates {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    &-add-startDate {
+        width: 70%;
+        max-width: 70%;
+        .addpropertyform-input {
+            width: 100%;
+            font-weight: 600;
+            font-size: 1.1rem;
+            padding: 0.7rem 1rem;
+        }
+    }
+
+    &-add-endDate {
+        width: 70%;
+        max-width: 70%;
+        .addpropertyform-input {
+            width: 100%;
+            font-weight: 600;
+            font-size: 1.1rem;
+            padding: 0.7rem 1rem;
+        }
+    }
+
+    &-add-details {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    &-add-guests {
+        display: flex;
+        justify-content: space-between;
+
+        label {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .addpropertyform-input {
+            padding: 0.4rem;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+    }
+
+    &-add-bedrooms {
+        display: flex;
+        justify-content: space-between;
+
+        label {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .addpropertyform-input {
+            padding: 0.4rem;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+    }
+
+    &-add-beds {
+        display: flex;
+        justify-content: space-between;
+
+        label {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .addpropertyform-input {
+            padding: 0.4rem;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+    }
+
+    &-add-baths {
+        display: flex;
+        justify-content: space-between;
+
+        label {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .addpropertyform-input {
+            padding: 0.4rem;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+    }
+
+    &-add-offers {
+        display: flex;
+        margin: 0 auto;
+        padding: 1rem;
+        width: 50%;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    &-add-wifi {
+        display: flex;
+        justify-content: space-between;
+
+        label {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .addpropertyform-input {
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+    }
+
+    &-add-kitchen {
+        display: flex;
+        justify-content: space-between;
+
+        label {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .addpropertyform-input {
+            padding: 0.4rem;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+    }
+
+    &-add-parking {
+        display: flex;
+        justify-content: space-between;
+
+        label {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .addpropertyform-input {
+            padding: 0.4rem;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+    }
+
+    &-add-pets {
+        display: flex;
+        justify-content: space-between;
+
+        label {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .addpropertyform-input {
+            padding: 0.4rem;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+    }
+
+    &-add-tv {
+        display: flex;
+        justify-content: space-between;
+
+        label {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .addpropertyform-input {
+            padding: 0.4rem;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+    }
+
+    &-add-pool {
+        display: flex;
+        justify-content: space-between;
+
+        label {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .addpropertyform-input {
+            padding: 0.4rem;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+    }
+
+    &-add-smoke {
+        display: flex;
+        justify-content: space-between;
+
+        label {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .addpropertyform-input {
+            padding: 0.4rem;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+    }
+
+    .checkbox-larger {
+        width: 40px;
+        height: 40px;
+        border-radius: 1rem;
+    }
+
+    .submit {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+
+        .btn {
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+    }
+}
+
+@media only screen and (min-width: 940px) {
+    .addpropertyform {
+        &-content {
+            max-width: 70%;
+            padding: 2rem;
+        }
+    }
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
