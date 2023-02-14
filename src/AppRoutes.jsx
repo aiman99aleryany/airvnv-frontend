@@ -1,50 +1,43 @@
-import Home from './pages/Home';
-import AddProperty from './pages/AddProperty';
-import Bookings from './pages/Bookings';
-import Signin from './pages/Signin';
-import Property from './pages/Property';
-import ViewAll from './pages/ViewAll';
-import Test from './pages/Test';
-import MyProperties from './pages/MyProperties';
-import CheckBooking from './pages/CheckBooking';
+import { Route } from 'react-router-dom';
+import { createBrowserRouter } from 'react-router-dom';
+import { createRoutesFromElements } from 'react-router-dom';
+import LazyLoading from 'shared/components/lazyLoading/LazyLoading';
+import Layout from 'shared/components/layout/Layout';
+import Home from 'pages/Home';
+import Contact from 'pages/Contact';
+import About from 'pages/About';
+import NoPage from 'pages/NoPage';
 
-const AppRoutes = [
-    {
-        path: 'test',
-        element: <Test />,
-    },
-    {
-        path: '/',
-        element: <Home />,
-    },
-    {
-        path: 'signin',
-        element: <Signin />,
-    },
-    {
-        path: 'my-properties',
-        element: <MyProperties />,
-    },
-    {
-        path: 'view-all',
-        element: <ViewAll />,
-    },
-    {
-        path: 'add-property',
-        element: <AddProperty />,
-    },
-    {
-        path: 'bookings',
-        element: <Bookings />,
-    },
-    {
-        path: 'check-booking/:id',
-        element: <CheckBooking />
-    },
-    {
-        path: 'property/:id',
-        element: <Property />,
-    },
-];
+const AppRoutes = createBrowserRouter(
+    createRoutesFromElements(
+        <Route>
+            <Route path="/" element={<Layout />}>
+                <Route
+                    index
+                    element={
+                        <LazyLoading element={<Home />} fallback={<>...</>} />
+                    }
+                />
+
+                <Route
+                    path="contact"
+                    element={
+                        <LazyLoading
+                            element={<Contact />}
+                            fallback={<>...</>}
+                        />
+                    }
+                />
+            </Route>
+            <Route
+                path="about"
+                element={
+                    <LazyLoading element={<About />} fallback={<>...</>} />
+                }
+            />
+            <Route path="*" element={<NoPage />} />
+        </Route>
+    )
+);
 
 export default AppRoutes;

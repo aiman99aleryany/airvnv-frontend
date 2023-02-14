@@ -1,19 +1,16 @@
-import React from 'react';
-import NavBar from '../components/navbar/NavBar';
-import Hero from '../components/hero/Hero';
-import Best from '../components/best/Best';
-import Featured from '../components/featured/Featured';
-import { ScrollRestoration } from 'react-router-dom';
-import Footer from '../components/footer/Footer';
+import useStore from 'shared/store/useStore';
+
 function Home() {
+    const counter = useStore((state) => state.counter);
+    const inc = useStore((state) => state.inc);
+    const dec = useStore((state) => state.dec);
+    const reset = useStore((state) => state.reset);
     return (
         <div>
-            <NavBar />
-            <Hero />
-            <Best />
-            <Featured />
-            <Footer />
-            <ScrollRestoration />
+            <h1>{counter}</h1>
+            <button onClick={inc}>++</button>
+            <button onClick={dec}>--</button>
+            <button onClick={reset}>Reset</button>
         </div>
     );
 }
