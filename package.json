@@ -7,7 +7,7 @@
         "build": "vite build",
         "preview": "vite preview",
         "lint": "eslint ./src/**/*.jsx",
-        "sass": "sass ./src/styles/index.scss ./src/styles/css/index.css --watch",
+        "sass": "sass ./src/assets/styles/index.scss ./src/assets/styles/css/index.css --watch",
         "prettier": "npx prettier . --write",
         "dev": "npx concurrently 'npm run start' 'npm run sass'"
     },
