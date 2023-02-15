@@ -15,16 +15,18 @@ class Property {
         this.#fields.rating = payload.fields?.rating ?? this.fields.rating;
         this.#fields.images = payload.fields?.images ?? this.fields.images;
         this.#fields.createdAt =
-            payload.fields.createdAt ?? this.fields.createdAt;
+            payload.fields?.createdAt ?? this.fields.createdAt;
         this.#fields.updatedAt =
-            payload.fields.updatedAt ?? this.fields.updatedAt;
-        this.#fields.details = payload.fields.details ?? this.fields.details;
-        this.#fields.offers = payload.fields.offers ?? this.fields.offers;
-        this.#fields.reviews = payload.fields.reviews ?? this.fields.reviews;
-        this.#fields.bookings = payload.fields.bookings ?? this.fields.bookings;
+            payload.fields?.updatedAt ?? this.fields.updatedAt;
+        this.#fields.details = payload.fields?.details ?? this.fields.details;
+        this.#fields.offers = payload.fields?.offers ?? this.fields.offers;
+        this.#fields.reviews = payload.fields?.reviews ?? this.fields.reviews;
+        this.#fields.bookings =
+            payload.fields?.bookings ?? this.fields.bookings;
         this.#fields.description =
-            payload.fields.description ?? this.fields.description;
-        this.#fields.isEdited = payload.fields.isEdited ?? this.fields.isEdited;
+            payload.fields?.description ?? this.fields.description;
+        this.#fields.isEdited =
+            payload.fields?.isEdited ?? this.fields.isEdited;
     }
 
     set fields(newFields) {
