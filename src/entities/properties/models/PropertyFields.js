@@ -1,6 +1,4 @@
-import noMutate from 'utils/functions/noMutate';
-
-class Fields {
+class PropertyFields {
     #id = '';
     #ownerId = '';
     #title = '';
@@ -25,15 +23,15 @@ class Fields {
         this.#title = payload.title ?? this.#title;
         this.#type = payload.type ?? this.#type;
         this.#price = payload.price ?? this.#price;
-        this.#address = { ...noMutate(payload.address) } ?? this.#address;
+        this.#address = payload.address ?? this.#address;
         this.#rating = payload.rating ?? this.#rating;
-        this.#images = [...noMutate(payload.images)] ?? this.#images;
+        this.#images = payload.images ?? this.#images;
         this.#createdAt = payload.createdAt ?? this.#createdAt;
         this.#updatedAt = payload.updatedAt ?? this.#updatedAt;
-        this.#details = [...noMutate(payload.details)] ?? this.#details;
-        this.#offers = [...noMutate(payload.offers)] ?? this.#offers;
-        this.#reviews = [...noMutate(payload.reviews)] ?? this.#reviews;
-        this.#bookings = [...noMutate(payload.bookings)] ?? this.#bookings;
+        this.#details = payload.details ?? this.#details;
+        this.#offers = payload.offers ?? this.#offers;
+        this.#reviews = payload.reviews ?? this.#reviews;
+        this.#bookings = payload.bookings ?? this.#bookings;
         this.#description = payload.description ?? this.#description;
         this.#isEdited = payload.isEdited ?? this.#isEdited;
     }
@@ -83,7 +81,7 @@ class Fields {
     }
 
     set address(newAddress) {
-        this.#address = { ...noMutate(newAddress) };
+        this.#address = newAddress;
     }
 
     get rating() {
@@ -99,7 +97,7 @@ class Fields {
     }
 
     set images(newImages) {
-        this.#images = { ...noMutate(newImages) };
+        this.#images = newImages;
     }
 
     get createdAt() {
@@ -123,7 +121,7 @@ class Fields {
     }
 
     set details(newDetails) {
-        this.#details = { ...noMutate(newDetails) };
+        this.#details = newDetails;
     }
 
     get offers() {
@@ -131,7 +129,7 @@ class Fields {
     }
 
     set offers(newOffers) {
-        this.#offers = { ...noMutate(newOffers) };
+        this.#offers = newOffers;
     }
 
     get reviews() {
@@ -139,7 +137,7 @@ class Fields {
     }
 
     set reviews(newReviews) {
-        this.#reviews = { ...noMutate(newReviews) };
+        this.#reviews = newReviews;
     }
 
     get bookings() {
@@ -147,7 +145,7 @@ class Fields {
     }
 
     set bookings(newBookings) {
-        this.#bookings = { ...noMutate(newBookings) };
+        this.#bookings = newBookings;
     }
 
     get description() {
@@ -167,4 +165,4 @@ class Fields {
     }
 }
 
-export default Fields;
+export default PropertyFields;

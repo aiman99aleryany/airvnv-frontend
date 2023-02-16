@@ -1,4 +1,4 @@
-import Property from './property';
+import Property from './Property';
 
 class PropertiesCollection {
     #properties = [];
@@ -6,8 +6,7 @@ class PropertiesCollection {
     constructor(payload = null) {
         if (!payload || Object.keys(payload).length <= 0) return;
         this.#properties = payload.map((property) => {
-            if (property instanceof Property) return property;
-            else return 'no Property';
+            return new Property(property);
         });
     }
 

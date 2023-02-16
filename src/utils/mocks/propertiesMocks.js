@@ -1,14 +1,13 @@
 import { nanoid } from 'nanoid';
-import Property from 'shared/properties/models/property';
 
-const property1 = new Property();
-const property2 = new Property();
-const property3 = new Property();
-const property4 = new Property();
-const property5 = new Property();
-const property6 = new Property();
-const property7 = new Property();
-const property8 = new Property();
+const property1 = {};
+const property2 = {};
+const property3 = {};
+const property4 = {};
+const property5 = {};
+const property6 = {};
+const property7 = {};
+const property8 = {};
 
 property1.fields = {
     id: nanoid(),

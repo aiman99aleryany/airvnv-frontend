@@ -1,12 +1,11 @@
-import Fields from './Fields';
-import INIT_FIELDS from '../constants/INIT_FIELDS';
+import PropertyFields from './PropertyFields';
 
 class Property {
-    #fields = new Fields(INIT_FIELDS);
+    #fields = new PropertyFields();
 
     constructor(payload = null) {
         if (!payload || Object.keys(payload).length <= 0) return;
-        this.#fields = new Fields(payload.fields);
+        this.#fields = new PropertyFields(payload.fields);
     }
 
     get fields() {
@@ -14,7 +13,7 @@ class Property {
     }
 
     set fields(newFields) {
-        this.#fields = new Fields(newFields);
+        this.#fields = new PropertyFields(newFields);
     }
 }
 

@@ -1,5 +1,4 @@
-import React from 'react';
-import Properties from 'shared/properties/components/Properties';
+import Properties from 'entities/properties/components/Properties';
 
 function ViewAll() {
     return (

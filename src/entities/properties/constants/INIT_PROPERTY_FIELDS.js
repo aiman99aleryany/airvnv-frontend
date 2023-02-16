@@ -1,4 +1,4 @@
-const INIT_FIELDS = {
+const INIT_PROPERTY_FIELDS = {
     id: '',
     ownerId: '',
     title: '',
@@ -17,4 +17,4 @@ const INIT_FIELDS = {
     isEdited: false,
 };
 
-export default INIT_FIELDS;
+export default INIT_PROPERTY_FIELDS;
