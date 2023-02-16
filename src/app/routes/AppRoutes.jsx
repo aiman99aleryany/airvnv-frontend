@@ -34,22 +34,27 @@ const AppRoutes = createBrowserRouter(
                         />
                     }
                 />
-            </Route>
 
-            <Route
-                path="about"
-                element={
-                    <LazyLoading element={<About />} fallback={<>...</>} />
-                }
-            />
-            <Route
-                path="viewall"
-                element={
-                    <LazyLoading element={<ViewAll />} fallback={<>...</>} />
-                }
-                loader={() => propertiesMocks}
-            />
-            <Route path="*" element={<NoPage />} />
+                <Route
+                    path="about"
+                    element={
+                        <LazyLoading element={<About />} fallback={<>...</>} />
+                    }
+                />
+
+                <Route
+                    path="viewall"
+                    element={
+                        <LazyLoading
+                            element={<ViewAll />}
+                            fallback={<>...</>}
+                        />
+                    }
+                    loader={() => propertiesMocks}
+                />
+
+                <Route path="*" element={<NoPage />} />
+            </Route>
         </Route>
     )
 );
