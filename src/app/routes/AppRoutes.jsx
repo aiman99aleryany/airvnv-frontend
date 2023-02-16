@@ -3,11 +3,11 @@ import { createBrowserRouter } from 'react-router-dom';
 import { createRoutesFromElements } from 'react-router-dom';
 import LazyLoading from 'utils/components/lazyLoading/LazyLoading';
 import MainLayout from 'app/layouts/main/MainLayout';
-import Home from 'app/pages/Home';
-import Contact from 'app/pages/Contact';
-import About from 'app/pages/About';
+import Home from 'app/features/home/pages/Home';
+import Contact from 'app/features/contact/pages/Contact';
+import About from 'app/features/about/pages/About';
 import ViewAll from 'app/features/viewAll/pages/ViewAll';
-import NoPage from 'app/pages/NoPage';
+import NoPage from 'app/features/noPage/pages/NoPage';
 
 // mocks for loaders ... later will be replaced with services.
 import propertiesMocks from 'utils/mocks/propertiesMocks';
